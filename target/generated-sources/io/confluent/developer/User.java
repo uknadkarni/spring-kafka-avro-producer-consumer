@@ -106,7 +106,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: name = (java.lang.String)value$; break;
+    case 0: name = value$ != null ? value$.toString() : null; break;
     case 1: age = (java.lang.Integer)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
@@ -183,6 +183,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   /**
    * RecordBuilder for User instances.
    */
+  @org.apache.avro.specific.AvroGenerated
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<User>
     implements org.apache.avro.data.RecordBuilder<User> {
 
