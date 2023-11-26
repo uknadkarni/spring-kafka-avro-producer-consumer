@@ -1,37 +1,35 @@
-HELP.md
-.gradle
+# Maven
+target/
+mvnw
+mvnw.cmd
+.mvn/
+
+# Gradle
 build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
+.gradle/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
-### IntelliJ IDEA ###
-.idea
-*.iws
+# IDE files
+.idea/
 *.iml
 *.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+*.iws
+*.log
+*.log.*
+*.logs/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# OS-specific files
+.DS_Store
+Thumbs.db
 
-### VS Code ###
-.vscode/
+# Compiled bytecode
+*.class
+
+# Logs
+log/
+*.log
+
+# Package Files
+*.jar
+*.war
+*.ear
+*.zip
