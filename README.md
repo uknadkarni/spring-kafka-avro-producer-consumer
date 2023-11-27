@@ -7,6 +7,7 @@ This Spring Boot project, `spring-kafka-avro-producer-consumer`, is designed to 
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Building the Project](#building-the-project)
+  - [Setting up Kafka Locally](#setting-up-kafka-locally)
 - [Configuration](#configuration)
   - [Local Development](#local-development)
   - [Production (Confluent Cloud)](#production-confluent-cloud)
@@ -25,7 +26,7 @@ Ensure you have the following installed on your development machine:
 
 - [Java Development Kit (JDK) 17](https://openjdk.java.net/)
 - [Apache Maven](https://maven.apache.org/)
-- [Docker](https://www.docker.com/) (for Kafka setup in local development)
+
 
 ### Building the Project
 
@@ -35,6 +36,15 @@ The project was built with Spring Boot version 3.2.0. Clone the repository:
 git clone https://github.com/uknadkarni/spring-kafka-avro-producer-consumer.git
 cd spring-kafka-avro-producer-consumer
 ```
+
+### Setting up Kafka Locally
+To set up Kafka locally, follow these steps:
+1. Extract the latest version of Confluent Platform
+2. Start Zookeeper: `./bin/zookeeper-server-start ./etc/kafka/zookeeper.properties` 
+3. Start Kafka broker: `.bin/kafka-server-start ./etc/kafka/server.properties`
+4. Start Schema Registry: `./bin/schema-registry-start etc/schema-registry/schema-registry.properties` 
+4. Control Center: Optionally, for monitoring, download and start Confluent Control Center: `./bin/control-center-start ./etc/confluent-control-center/control-center.properties` 
+
 ### Configuration 
 The application uses different configuration files based on the Kafka environment.
 
