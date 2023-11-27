@@ -57,12 +57,12 @@ For production deployment on Confluent Cloud, use the `application-prod`.propert
 ### Usage
 #### RESTful Endpoint
 The application exposes a RESTful HTTP POST endpoint at `/users/publish` to post a user's name and age. The payload should be in JSON format:
-
+```json
 {
   "name": "John Doe",
   "age": 25
 }
-
+```
 This endpoint publishes the user information to the configured Kafka topic.
 
 #### Actuator Endpoints
@@ -70,9 +70,13 @@ This endpoint publishes the user information to the configured Kafka topic.
 The Actuator endpoints provide various monitoring and management features:
 
 **/actuator/health:** Application health information
+
 **/actuator/info:** Custom application information
+
 **/actuator/metrics:** Metrics information
+
 **/actuator/env:** Environment properties
+
 
 These endpoints can be accessed for monitoring and managing the application.
 
