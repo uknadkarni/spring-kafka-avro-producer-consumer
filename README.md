@@ -41,7 +41,7 @@ cd spring-kafka-avro-producer-consumer
 To set up Kafka locally, follow these steps:
 1. Extract the latest version of Confluent Platform
 2. Start Zookeeper: `./bin/zookeeper-server-start ./etc/kafka/zookeeper.properties` 
-3. Start Kafka broker: `.bin/kafka-server-start ./etc/kafka/server.properties`
+3. Start Kafka broker: `./bin/kafka-server-start ./etc/kafka/server.properties`
 4. Start Schema Registry: `./bin/schema-registry-start etc/schema-registry/schema-registry.properties` 
 4. Control Center: Optionally, for monitoring, download and start Confluent Control Center: `./bin/control-center-start ./etc/confluent-control-center/control-center.properties` 
 
@@ -56,7 +56,7 @@ For production deployment on Confluent Cloud, use the `application-prod`.propert
 
 ### Usage
 #### RESTful Endpoint
-The application exposes a RESTful HTTP POST endpoint at `/users/publish` to post a user's name and age. The payload should be in JSON format:
+The application exposes a RESTful HTTP POST endpoint at `/user/publish` to post a user's name and age. The payload should be in JSON format:
 ```json
 {
   "name": "John Doe",
@@ -82,7 +82,7 @@ These endpoints can be accessed for monitoring and managing the application.
 
 ### Avro Schema
 
-The Avro schema for the User object is defined in the file `src/main/avro/user.avsc`. The schema specifies the structure of the user data being sent to Kafka. Ensure that any data posted to the /users/publish endpoint adheres to this Avro schema.
+The Avro schema for the User object is defined in the file `src/main/avro/user.avsc`. The schema specifies the structure of the user data being sent to Kafka. Ensure that any data posted to the `/user/publish` endpoint adheres to this Avro schema.
 
 ### Contributing
 We welcome contributions to this project! To contribute, follow these steps:
